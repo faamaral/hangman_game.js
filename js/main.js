@@ -81,7 +81,7 @@ const verifyLetter = () =>
     }
 
     if (ERRORS === 6) {
-        alert("Você não tem mais chances, tente da proxima vez !!!");
+        alert("Você não tem mais chances, tente da proxima vez !!!\nA palavra correta era: "+raffledKey.join(''));
         location.reload();
     }
 }
