@@ -7,7 +7,18 @@
     <title>Jogo da forca</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Jogo da Forca</h1>
+    <h3>Descubra a palavra secreta</h3>
+
+    <p id="secret_word"></p>
+
+    <form name="form">
+        <input type="text" name="letter" id="letter" size="5" maxlength="1">
+        <input name="verifyButton" type="button" value="Verificar" onclick="verifyLetter()">
+
+        <p id="wrong_letters">Letras erradas: </p>
+        <img src="./assets/images/0.jpg" alt="" id="hangman"><br><br>
+    </form>
 
     <script src="js/main.js"></script>
 </body>
