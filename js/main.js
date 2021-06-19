@@ -13,16 +13,17 @@ let LETTERS_FOUND = [];
 
 let ERRORS = 0
 
+let LIFE = 6
+
 function initHiddenKey()
 {
     for (let i = 0; i < raffledKey.length; i++) {
-        LETTERS_FOUND.push("_");
+        LETTERS_FOUND[i] = "_";
     }
 }
 
 function printHiddenKey()
 {
-    initHiddenKey();
     for (let i = 0; i < LETTERS_FOUND.length; i++) {
         let secret_word = document.getElementById("secret_word");
         let key = document.createTextNode(LETTERS_FOUND[i]);
@@ -30,13 +31,19 @@ function printHiddenKey()
     }
 }
 
+const printLife = error => {
+    let errors = document.getElementById("errors");
+    let life = document.createTextNode(error);
+    errors.appendChild(life);
+}
+
 const verifyLetter = () =>
 {
     let form = document.form;
     let input = form.elements["letter"];
-    let key = input.value;
+    var key = input.value;
     key = key.toUpperCase();
-    for (let i = 0; i > raffledKey.length; i++) {
+    for (let i = 0; i < raffledKey.length; i++) {
         if (raffledKey[i] === key) {
             LETTERS_FOUND[i] = key;
             var is_right = true;
@@ -54,6 +61,11 @@ const verifyLetter = () =>
         var wrong_letter = document.createTextNode(""+key);
         generateLetter.appendChild(wrong_letter);
         ERRORS += 1;
+        LIFE -= 1;
+        let errors = document.getElementById("errors");
+        errors.innerHTML = "Vidas: "
+        printLife(LIFE);
+        
         var hangman = document.getElementById("hangman");
         hangman.src = "./assets/images/" + ERRORS + ".jpg";
     }
@@ -70,10 +82,15 @@ const verifyLetter = () =>
 
     if (ERRORS === 6) {
         alert("Você não tem mais chances, tente da proxima vez !!!");
+        location.reload();
     }
 }
 
-const start = () => printHiddenKey();
+const start = () => {
+    initHiddenKey();
+    printHiddenKey();
+    printLife(LIFE);
+}
 
 onload = start
 

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body {
+	background: ;
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+}
+input {
+	border: 2px solid #999;
+	font-family: Helvetica, sans-serif;
+	color: #999;
+}
+
+#secret_word {
+	font-family: 'Staatliches', 'cursive';
+	font-size: 2.0em;
+}
+
+h1 {
+	font-family: 'Staatliches', 'cursive';
+}
