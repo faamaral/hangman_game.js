@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 body {
-	background: ;
+	background: url("./images/background.png") fixed no-repeat center;
+	background-size: cover;
 	text-align: center;
 	font-family: Helvetica, sans-serif;
 }
@@ -18,4 +19,8 @@ input {
 
 h1 {
 	font-family: 'Staatliches', 'cursive';
+}
+
+footer {
+	margin-top: 20px;
 }

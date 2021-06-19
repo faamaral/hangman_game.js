@@ -2,7 +2,10 @@ const SECRET_KEYS = [
     ["D","E","S","E","N","V","O","L","V","I","M","E","N","T","O"],
     ["W","E","B"],
     ["J","A","V","A"],
-    ["J","A","V","A","S","C","R","I","P","T"]
+    ["J","A","V","A","S","C","R","I","P","T"],
+    ["P","H","P"],
+    ["A","N","D", "R", "O", "I", "D"],
+    ["I", "P", "H", "O", "N", "E"]
 ];
 
 let raffle = Math.floor((Math.random()*(SECRET_KEYS.length-1)));
