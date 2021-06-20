@@ -88,11 +88,11 @@ const verifyLetter = () =>
         }
     }
     if (finished) {
-        alert("Você venceu, parabens !!!!");
+        alert("Você se livrou da forca sabiamente, parabéns !!!!");
     }
 
     if (ERRORS === 6) {
-        alert("Você não tem mais chances, tente da proxima vez !!!\nA palavra correta era: "+raffledKey.join(''));
+        alert("Você falhou miserávelmente e foi enforcado, tente da próxima vez !!!\nA palavra correta era: "+raffledKey.join(''));
         location.reload();
     }
 }
