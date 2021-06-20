@@ -1,3 +1,11 @@
+/**
+ * Description: This file is responsible for all the logic for running the hangman game.
+ * 
+ * Student: Fabiano Amaral Alves
+ * 
+ * Date: 20/06/2021
+ */
+
 const SECRET_KEYS = [
     ["D","E","S","E","N","V","O","L","V","I","M","E","N","T","O"],
     ["W","E","B"],
